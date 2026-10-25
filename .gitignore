@@ -9,11 +9,19 @@ venv/
 .venv/
 ENV/
 
-# Node / JS
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local SQLite Database & Exports
+*.db
+*.sqlite3
+security_logs.db
+ids_traffic_logs_*.csv
+
+# Streamlit Local Secrets (preserve config.toml)
+.streamlit/secrets.toml
 
 # Environment & Credentials
 .env
@@ -21,9 +29,8 @@ yarn-error.log*
 *.key
 *.pem
 
-# Logs & Databases
+# Logs
 *.log
-*.sqlite3
 
 # Operating System files
 .DS_Store
