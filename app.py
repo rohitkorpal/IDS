@@ -29,30 +29,69 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom Cyber Theme CSS
+# =============================================================================
+# Light Minimalistic Theme CSS
+# =============================================================================
+# [OLD DARK THEME CODE PRESERVED AS PER RULE 1]
+# CUSTOM_CSS = """
+# <style>
+#     /* Dark Cybersecurity Background and Base Typography */
+#     .stApp {
+#         background: radial-gradient(circle at 15% 15%, #0d1527 0%, #080c16 100%);
+#         color: #e2e8f0;
+#         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+#     }
+#     section[data-testid="stSidebar"] {
+#         background-color: #0b1120 !important;
+#         border-right: 1px solid #1e293b;
+#     }
+#     .metric-card {
+#         background: linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
+#         border: 1px solid #1e293b;
+#         border-left: 4px solid #00f2fe;
+#         border-radius: 8px;
+#         padding: 16px 20px;
+#         box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+#         margin-bottom: 12px;
+#     }
+#     .metric-card-danger { border-left-color: #ef4444 !important; }
+#     .metric-card-success { border-left-color: #10b981 !important; }
+#     .metric-card-warning { border-left-color: #f59e0b !important; }
+#     .metric-label { font-size: 0.82rem; text-transform: uppercase; color: #94a3b8; font-weight: 600; }
+#     .metric-val { font-size: 1.85rem; font-weight: 700; color: #f8fafc; }
+#     .metric-sub { font-size: 0.78rem; color: #64748b; }
+#     .sim-badge { background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid #0284c7; }
+#     .badge-allow { background-color: rgba(16, 185, 129, 0.2); color: #34d399; }
+#     .badge-block { background-color: rgba(239, 68, 68, 0.2); color: #f87171; }
+#     .badge-suspicious { background-color: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+#     h1, h2, h3 { color: #f8fafc !important; }
+#     .academic-disclaimer { background: rgba(30, 41, 59, 0.6); border: 1px solid #334155; }
+# </style>
+# """
+
 CUSTOM_CSS = """
 <style>
-    /* Dark Cybersecurity Background and Base Typography */
+    /* Clean Light Minimalist Styling */
     .stApp {
-        background: radial-gradient(circle at 15% 15%, #0d1527 0%, #080c16 100%);
-        color: #e2e8f0;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: #f8fafc;
+        color: #0f172a;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
     
-    /* Sidebar Styling */
+    /* Minimalist Light Sidebar */
     section[data-testid="stSidebar"] {
-        background-color: #0b1120 !important;
-        border-right: 1px solid #1e293b;
+        background-color: #ffffff !important;
+        border-right: 1px solid #e2e8f0;
     }
 
-    /* Metric Cards */
+    /* Minimalist Metric Cards */
     .metric-card {
-        background: linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
-        border: 1px solid #1e293b;
-        border-left: 4px solid #00f2fe;
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-left: 4px solid #0284c7;
         border-radius: 8px;
         padding: 16px 20px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
         margin-bottom: 12px;
     }
     .metric-card-danger {
@@ -65,85 +104,94 @@ CUSTOM_CSS = """
         border-left-color: #f59e0b !important;
     }
     .metric-label {
-        font-size: 0.82rem;
+        font-size: 0.78rem;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: #94a3b8;
+        letter-spacing: 0.06em;
+        color: #64748b;
         font-weight: 600;
         margin-bottom: 4px;
     }
     .metric-val {
         font-size: 1.85rem;
         font-weight: 700;
-        color: #f8fafc;
+        color: #0f172a;
         line-height: 1.2;
     }
     .metric-sub {
         font-size: 0.78rem;
-        color: #64748b;
+        color: #94a3b8;
         margin-top: 4px;
     }
 
-    /* Simulation Badge */
+    /* Minimalist Soft Badges */
     .sim-badge {
         display: inline-block;
-        background: rgba(14, 165, 233, 0.15);
-        color: #38bdf8;
-        border: 1px solid #0284c7;
+        background-color: #f0f9ff;
+        color: #0284c7;
+        border: 1px solid #bae6fd;
         border-radius: 4px;
         padding: 2px 8px;
         font-size: 0.75rem;
         font-weight: 600;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.04em;
     }
     
-    /* Status Badges */
     .badge-allow {
-        background-color: rgba(16, 185, 129, 0.2);
-        color: #34d399;
-        border: 1px solid #059669;
+        background-color: #ecfdf5;
+        color: #059669;
+        border: 1px solid #a7f3d0;
         padding: 2px 8px;
         border-radius: 4px;
         font-weight: 600;
+        font-size: 0.85rem;
     }
     .badge-block {
-        background-color: rgba(239, 68, 68, 0.2);
-        color: #f87171;
-        border: 1px solid #dc2626;
+        background-color: #fef2f2;
+        color: #dc2626;
+        border: 1px solid #fecaca;
         padding: 2px 8px;
         border-radius: 4px;
         font-weight: 600;
+        font-size: 0.85rem;
     }
     .badge-suspicious {
-        background-color: rgba(245, 158, 11, 0.2);
-        color: #fbbf24;
-        border: 1px solid #d97706;
+        background-color: #fffbeb;
+        color: #d97706;
+        border: 1px solid #fde68a;
         padding: 2px 8px;
         border-radius: 4px;
         font-weight: 600;
+        font-size: 0.85rem;
     }
     
-    /* Headers */
-    h1, h2, h3 {
-        color: #f8fafc !important;
-        font-weight: 700 !important;
+    /* Clean Minimal Headers */
+    h1, h2, h3, h4 {
+        color: #0f172a !important;
+        font-weight: 600 !important;
     }
     
-    /* Buttons */
+    /* Clean Buttons */
     .stButton>button {
         border-radius: 6px;
-        font-weight: 600;
-        transition: all 0.2s ease;
+        font-weight: 500;
+        border: 1px solid #cbd5e1;
+        transition: all 0.15s ease-in-out;
+    }
+    .stButton>button:hover {
+        border-color: #0284c7;
+        color: #0284c7;
     }
     
-    /* Notice Banner */
+    /* Minimalist Notice Banner */
     .academic-disclaimer {
-        background: rgba(30, 41, 59, 0.6);
-        border: 1px solid #334155;
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-left: 3px solid #0284c7;
         border-radius: 6px;
         padding: 10px 16px;
         font-size: 0.85rem;
-        color: #94a3b8;
+        color: #475569;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
         margin-bottom: 20px;
     }
 </style>
@@ -159,18 +207,33 @@ if "ids_config" not in st.session_state:
 if "last_action_msg" not in st.session_state:
     st.session_state["last_action_msg"] = None
 
-# Helper to plot dark-themed Plotly charts
+# Helper to format Plotly charts with a light minimalistic theme
+# Previously named apply_dark_theme, preserved as alias for compatibility
 def apply_dark_theme(fig):
+    """
+    # [OLD DARK THEME CODE PRESERVED AS PER RULE 1]
+    # fig.update_layout(
+    #     paper_bgcolor="rgba(17, 24, 39, 0.4)",
+    #     plot_bgcolor="rgba(17, 24, 39, 0.4)",
+    #     font=dict(color="#cbd5e1", family="Inter"),
+    #     margin=dict(l=20, r=20, t=35, b=20),
+    #     legend=dict(font=dict(color="#94a3b8"))
+    # )
+    # fig.update_xaxes(gridcolor="#1e293b", showline=True, linecolor="#334155")
+    # fig.update_yaxes(gridcolor="#1e293b", showline=True, linecolor="#334155")
+    """
     fig.update_layout(
-        paper_bgcolor="rgba(17, 24, 39, 0.4)",
-        plot_bgcolor="rgba(17, 24, 39, 0.4)",
-        font=dict(color="#cbd5e1", family="Inter"),
+        paper_bgcolor="#ffffff",
+        plot_bgcolor="#ffffff",
+        font=dict(color="#334155", family="sans-serif"),
         margin=dict(l=20, r=20, t=35, b=20),
-        legend=dict(font=dict(color="#94a3b8"))
+        legend=dict(font=dict(color="#475569"))
     )
-    fig.update_xaxes(gridcolor="#1e293b", showline=True, linecolor="#334155")
-    fig.update_yaxes(gridcolor="#1e293b", showline=True, linecolor="#334155")
+    fig.update_xaxes(gridcolor="#f1f5f9", showline=True, linecolor="#cbd5e1")
+    fig.update_yaxes(gridcolor="#f1f5f9", showline=True, linecolor="#cbd5e1")
     return fig
+
+apply_light_theme = apply_dark_theme
 
 
 # -----------------------------------------------------------------------------
@@ -178,7 +241,7 @@ def apply_dark_theme(fig):
 # -----------------------------------------------------------------------------
 st.sidebar.markdown("""
 <div style="padding: 10px 0;">
-    <h2 style="margin: 0; font-size: 1.35rem; color: #38bdf8 !important;">🛡️ CyberShield IDS</h2>
+    <h2 style="margin: 0; font-size: 1.35rem; color: #0284c7 !important;">🛡️ CyberShield IDS</h2>
     <div style="font-size: 0.78rem; color: #64748b; margin-top: 2px;">Firewall & Intrusion Detection System</div>
     <div style="margin-top: 8px;"><span class="sim-badge">ACADEMIC PROTOTYPE</span></div>
 </div>
@@ -324,15 +387,18 @@ if nav_page == "Dashboard":
             time_counts = df_events.set_index("dt").resample("1min")["event_id"].count().reset_index()
             time_counts.columns = ["Timestamp", "Events"]
 
+            # [OLD DARK TEMPLATE PRESERVED AS PER RULE 1]
+            # fig_time = px.line(time_counts, x="Timestamp", y="Events", title="Event Volume (Per Minute)", template="plotly_dark", color_discrete_sequence=["#00f2fe"])
+            # fig_time.update_traces(mode="lines+markers", fill="tozeroy", fillcolor="rgba(0, 242, 254, 0.1)")
             fig_time = px.line(
                 time_counts,
                 x="Timestamp",
                 y="Events",
                 title="Event Volume (Per Minute)",
-                template="plotly_dark",
-                color_discrete_sequence=["#00f2fe"]
+                template="plotly_white",
+                color_discrete_sequence=["#0284c7"]
             )
-            fig_time.update_traces(mode="lines+markers", fill="tozeroy", fillcolor="rgba(0, 242, 254, 0.1)")
+            fig_time.update_traces(mode="lines+markers", fill="tozeroy", fillcolor="rgba(2, 132, 199, 0.08)")
             st.plotly_chart(apply_dark_theme(fig_time), use_container_width=True)
 
         with c2:
@@ -340,12 +406,14 @@ if nav_page == "Dashboard":
             proto_counts = df_events["protocol"].value_counts().reset_index()
             proto_counts.columns = ["Protocol", "Count"]
 
+            # [OLD DARK PALETTE PRESERVED AS PER RULE 1]
+            # color_discrete_map={"TCP": "#38bdf8", "UDP": "#818cf8", "ICMP": "#34d399"}
             fig_proto = px.pie(
                 proto_counts,
                 names="Protocol",
                 values="Count",
                 hole=0.55,
-                color_discrete_map={"TCP": "#38bdf8", "UDP": "#818cf8", "ICMP": "#34d399"}
+                color_discrete_map={"TCP": "#0284c7", "UDP": "#6366f1", "ICMP": "#10b981"}
             )
             fig_proto.update_traces(textposition="inside", textinfo="percent+label")
             st.plotly_chart(apply_dark_theme(fig_proto), use_container_width=True)
@@ -357,13 +425,14 @@ if nav_page == "Dashboard":
                 df_alerts = pd.DataFrame(alerts)
                 sev_counts = df_alerts["severity"].value_counts().reset_index()
                 sev_counts.columns = ["Severity", "Count"]
-                color_map = {"HIGH": "#ef4444", "MEDIUM": "#f59e0b", "LOW": "#38bdf8"}
+                color_map = {"HIGH": "#ef4444", "MEDIUM": "#f59e0b", "LOW": "#0284c7"}
                 fig_sev = px.bar(
                     sev_counts,
                     x="Severity",
                     y="Count",
                     color="Severity",
                     color_discrete_map=color_map,
+                    template="plotly_white",
                     title="Alert Severity"
                 )
                 st.plotly_chart(apply_dark_theme(fig_sev), use_container_width=True)
